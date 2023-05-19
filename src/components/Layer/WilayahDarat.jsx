@@ -14,39 +14,18 @@ const WilayahDarat = () => {
 
   return (
     <div className="">
-      <div
-        className="flex bg-gray py-3 px-2 mr-1 ml-3 rounded-sm cursor-pointer"
-        onClick={toggleMenu}
-      >
+      <div className="flex bg-white py-3 px-2 rounded-sm cursor-pointer" onClick={toggleMenu}>
         <p className="text-xs sm:text-sm">Wilayah Adminitrasi Darat</p>
-        <div className="ml-auto">
-          {iconPosition === "down" ? (
-            <FaChevronDown className="w-4 h-4" />
-          ) : (
-            <FaChevronUp className="w-4 h-4" />
-          )}
-        </div>
+        <div className="ml-auto">{iconPosition === "down" ? <FaChevronDown className="w-4 h-4" /> : <FaChevronUp className="w-4 h-4" />}</div>
       </div>
       {isOpen && (
-        <div className="mr-2 ml-3 my-2 py-2 px-6 text-xs bg-white-grey rounded-md">
+        <div className="py-2 px-6 text-xs bg-[#FFFFFF] rounded-md">
           <ul>
             <li>
-              <Checkbox
-                label="Provinsi"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-green"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Provinsi" type="checkbox" showCircle={true} circleColor="bg-green" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Kota / Kabupaten"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-blue-sky"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Kota / Kabupaten" type="checkbox" showCircle={true} circleColor="bg-blue-sky" reference={checkboxRef} />
             </li>
           </ul>
         </div>

@@ -14,35 +14,18 @@ const Batas = () => {
 
   return (
     <div className="">
-      <div
-        className="flex bg-gray py-3 px-2 mr-1 ml-3 rounded-sm cursor-pointer"
-        onClick={toggleMenu}
-      >
+      <div className="flex bg-white py-3 px-2 rounded-sm cursor-pointer" onClick={toggleMenu}>
         <p className="text-xs sm:text-sm">Batas Laut</p>
-        <div className="ml-auto">
-          {iconPosition === "down" ? (
-            <FaChevronDown className="w-4 h-4" />
-          ) : (
-            <FaChevronUp className="w-4 h-4" />
-          )}
-        </div>
+        <div className="ml-auto">{iconPosition === "down" ? <FaChevronDown className="w-4 h-4" /> : <FaChevronUp className="w-4 h-4" />}</div>
       </div>
       {isOpen && (
-        <div className="mr-2 ml-3 my-2 py-2 px-6 text-xs bg-white-grey rounded-md">
+        <div className="py-2 px-6 text-xs bg-[#FFFFFF] rounded-md">
           <ul>
             <li>
-              <Checkbox
-                label="Teritorial"
-                type="checkbox"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Teritorial" type="checkbox" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Kontinen"
-                type="checkbox"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Kontinen" type="checkbox" reference={checkboxRef} />
             </li>
             <li>
               <Checkbox label="ZTE" type="checkbox" reference={checkboxRef} />
@@ -51,11 +34,7 @@ const Batas = () => {
               <Checkbox label="ALKI" type="checkbox" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Kontur Tekanan"
-                type="checkbox"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Kontur Tekanan" type="checkbox" reference={checkboxRef} />
             </li>
             <Checkbox label="Suhu" type="checkbox" reference={checkboxRef} />
 

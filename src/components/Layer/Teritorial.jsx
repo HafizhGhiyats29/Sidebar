@@ -14,77 +14,24 @@ const Teritorial = () => {
 
   return (
     <div className="">
-      <div
-        className="flex bg-gray py-3 px-2 mr-1 ml-3 rounded-sm cursor-pointer"
-        onClick={toggleMenu}
-      >
-        <p className="text-xs sm:text-sm">Teritorial MIliter</p>
-        <div className="ml-auto">
-          {iconPosition === "down" ? (
-            <FaChevronDown className="w-4 h-4" />
-          ) : (
-            <FaChevronUp className="w-4 h-4" />
-          )}
-        </div>
+      <div className="flex bg-white py-3 px-2 rounded-sm cursor-pointer" onClick={toggleMenu}>
+        <p className="text-xs sm:text-sm">TNI AL</p>
+        <div className="ml-auto">{iconPosition === "down" ? <FaChevronDown className="w-4 h-4" /> : <FaChevronUp className="w-4 h-4" />}</div>
       </div>
       {isOpen && (
-        <div className="mr-2 ml-3 my-2 py-2 px-6 text-xs bg-white-grey rounded-md">
+        <div className=" py-2 px-6 text-xs bg-[#FFFFFF] rounded-md">
           <ul>
-            TNI AL
-            <hr className="w-46 mx-auto border-1 border-gray-dark" />
             <li>
-              <Checkbox
-                label="Armada Satu"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-red"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Armada Satu" type="checkbox" showCircle={true} circleColor="bg-red" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Armada Dua"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-yellow"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Armada Dua" type="checkbox" showCircle={true} circleColor="bg-yellow" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Armada Tiga"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-blue-sky"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Armada Tiga" type="checkbox" showCircle={true} circleColor="bg-blue-sky" reference={checkboxRef} />
             </li>
             <li>
-              <Checkbox
-                label="Lanal"
-                type="checkbox"
-                showCircle={true}
-                circleColor="bg-green"
-                reference={checkboxRef}
-              />
-            </li>
-          </ul>
-          <ul className="mt-2">
-            TNI AU
-            <hr className="w-46 mx-auto border-1 border-gray-dark" />
-            <li>
-              <Checkbox
-                label="Komando Operasi"
-                type="checkbox"
-                reference={checkboxRef}
-              />
-            </li>
-            <li>
-              <Checkbox
-                label="Komando Sector"
-                type="checkbox"
-                reference={checkboxRef}
-              />
+              <Checkbox label="Lanal" type="checkbox" showCircle={true} circleColor="bg-green" reference={checkboxRef} />
             </li>
           </ul>
         </div>
